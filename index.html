@@ -4,8 +4,130 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Planner</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/03673f4e3f.js" crossorigin="anonymous"></script>
+  <script src="index.js" defer></script>
 </head>
 <body>
-  
-</body>
+  <section id="landing-page">
+    <div class="row">
+      <nav class="nav">
+        <ul class="nav__links">
+          <li class="nav__list nav__list--left click">
+            <a href="#" class="nav__link">
+              Home
+            </a>
+          </li>
+          <li class="nav__list nav__list--left click">
+            <a href="#" class="nav__link">
+              About
+            </a>
+          </li>
+        </ul>
+        <div class="landing-page--title">90-Day Planners</div>
+        <ul class="nav__links">
+          <li class="nav__list nav__list--right click">
+            <a href="#" class="nav__link">
+              Shop
+            </a>
+          </li>
+          <li class="nav__list nav__list--right click">
+            <a href="#" class="nav__link">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="nav__divider"></div>
+      <header>
+        <div class="header__title">
+          <h1 class="header__title">
+            Build Discipline.
+            <br>
+            Stay Focused. Level Up.
+          </h1>
+        </div>
+        <div class="header__planners">
+          <a class="planner__link" href="" onclick="toggleModal(event, 'focus')">
+            <figure class="planner__img--wrapper">
+              <img class="planner__img" src="/assets/focus-mode.png" alt="">
+              <div class="planner__img--para">
+                A SELF DISCIPLINE & PRODUCTIVITY PLANNER
+              </div>
+            </figure>
+            <span class="planner__title">Focus Mode</span>
+          </a>
+          <a class="planner__link" href="" onclick="toggleModal(event, 'reset')">
+            <figure class="planner__img--wrapper">
+              <img class="planner__img" src="/assets/reset-to-rebuild.png" alt="">
+              <div class="planner__img--para">
+                A SELF DISCIPLINE & PRODUCTIVITY PLANNER
+              </div>
+            </figure>
+            <span class="planner__title">Reset & Rebuild</span>
+          </a>
+          <a class="planner__link" href="" onclick="toggleModal(event, 'glow')">
+            <figure class="planner__img--wrapper">
+              <img class="planner__img" src="/assets/498b2976-173a-4307-8ca8-b1e42e2e0ae5 (1) (2) copy 8.png" alt="">
+              <div class="planner__img--para">
+                A SELF DISCIPLINE & PRODUCTIVITY PLANNER
+              </div>
+            </figure>
+            <span class="planner__title">Glow-Up Guide</span>
+          </a>
+          <a class="planner__link" href="" onclick="toggleModal(event, 'excuses')">
+            <figure class="planner__img--wrapper">
+              <img class="planner__img" src="/assets/no-more-excuses.png" alt="">
+              <div class="planner__img--para">
+                A SELF DISCIPLINE & PRODUCTIVITY PLANNER
+              </div>
+            </figure>
+            <span class="planner__title">No More Excuses</span>
+            </a>
+          <a class="planner__link" href="" onclick="toggleModal(event, 'couple')">
+            <figure class="planner__img--wrapper">
+              <img class="planner__img" src="/assets/the-couples-planner.png" alt="">
+              <div class="planner__img--para">
+                A SELF DISCIPLINE & PRODUCTIVITY PLANNER
+              </div>
+            </figure>
+            <span class="planner__title">The Couple's Planner</span>
+          </a>
+          <a class="planner__link" href="" onclick="toggleModal(event, 'hustle')">
+            <figure class="planner__img--wrapper">
+              <img class="planner__img" src="/assets/side-hustle-blueprint.png" alt="">
+              <div class="planner__img--para">
+                A SELF DISCIPLINE & PRODUCTIVITY PLANNER
+              </div>
+            </figure>
+            <span class="planner__title">Side Hustle Blueprint</span>
+          </a>
+        </div>
+      </header>
+    </div>
+    <div class="modal__overlay" onclick="outsideClick(event)">
+      <div class="modal" onclick="event.stopPropagation()">
+        <div class="modal__half modal__left">
+          <h2 class="modal__sub-title" id="modal-subtitle-left"></h2>
+          <div class="modal__planner--pages" id="modal-images">
+            <figure class="modal__img--wrapper">
+            </figure>
+            <figure class="modal__img--wrapper">
+            </figure>
+            <figure class="modal__img--wrapper">
+            </figure>
+            <figure class="modal__img--wrapper">
+            </figure>
+          </div>
+        </div>
+        <div class="modal__half modal__right" id="modal-right">
+          <h1 class="modal__title" id="modal-title"></h1>
+          <h2 class="modal__sub-title" id="modal-subtitle-right"></h2>
+          <div class="modal__para" id="modal-description"></div>
+        </div>
+        <i class="fa-solid fa-xmark click" onclick="closeModal()"></i>
+      </div>
+    </div>
+    </section>
+  </body>
 </html>
